@@ -8,6 +8,7 @@ https://github.com/lucascouto/krackattack-all-zero-tk-key
 https://github.com/kristate/krackinfo    
 https://github.com/fwalloe/KrackPlus   
 
+<h3>Check Client Vulnerability</h3>
 
 Run Scripts:
 - run 'sudo apt update'
@@ -30,3 +31,18 @@ Before every usage
 - run 'source venv/bin/activate'
 - run 'sudo python3 krack-test-client.py'
 - optional: if scapy installation needed, run 'pip install scapy==2.4.4'
+
+
+<h3>Check AP Vulnerability</h3>
+(Optional:) In case of long interface name run: 'sudo airmon-ng start INTERFACE_NAME'       
+<br /><br />     
+
+First, Make wpa_supplicant conf file:      
+
+- run 'wpa_passphrase AP-NAME AP-PASS | sudo tee /etc/wpa_supplicant.conf'      
+(after entering AP-NAME & AP-PASS)
+
+(Optional:) To check connectivity: 'sudo wpa_supplicant -c /etc/wpa_supplicant.conf -i INTERFACE_NAME'
+
+Run Scripts:
+- ./krack-ft-test.py wpa_supplicant -D nl80211 -i wlan0mon -c /etc/wpa_supplicant.conf
