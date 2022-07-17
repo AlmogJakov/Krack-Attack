@@ -109,12 +109,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-krackattacks-scripts/venv/
-krackattacks-scripts/.venv
-krackattacks-scripts/krackattack/.env
-krackattacks-scripts/krackattack/.venv
-krackattacks-scripts/krackattack/env/
-krackattacks-scripts/krackattack/venv/
+
 
 # Spyder project settings
 .spyderproject
