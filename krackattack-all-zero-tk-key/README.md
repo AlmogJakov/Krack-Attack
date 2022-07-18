@@ -1,5 +1,14 @@
 <b>Note! The code execution is under python 2</b>    
 </br>
+
+<b>In case of long interface name please run 'sudo airmon-ng start INTERFACE_NAME'</b>  
+</br>
+
+Before execution run the following commands:
+- sudo airmon-ng check kill
+- service network-manager stop
+- sudo rfkill unblock wifi
+
 krack_all_zero_tk.py Run example:
 - sudo python ./krackattack/krack_all_zero_tk.py wlx6c5ab0b3f988 wlan0mon ens33 "check" -t F0:27:65:DA:AD:E8    
 (See below for an explanation of the command)    
