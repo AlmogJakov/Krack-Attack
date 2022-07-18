@@ -17,7 +17,7 @@ fakeAP.py Run example:
 - sudo python fakeAP.py yoyo 1 ens33 wlan0mon   
 (where SSID=yoyo, CHANNEL=1, INTERNET_INTERFACE=ens33, AP_INTERFACE=wlan0mon)    
     
-May require the following packages:
+The code may require the following packages:
 - macchanger
 - connect-proxy (sudo apt install connect-proxy)
 - socket (sudo apt install socket)
