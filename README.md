@@ -46,3 +46,6 @@ First, Make wpa_supplicant conf file:
 
 Run Scripts:
 - ./krack-ft-test.py wpa_supplicant -D nl80211 -i wlan0mon -c /etc/wpa_supplicant.conf
+</br>
+tp-link-wn821n driver:    
+https://askubuntu.com/questions/879868/tp-link-wn821n-23570107-not-working
