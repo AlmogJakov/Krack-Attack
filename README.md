@@ -49,3 +49,9 @@ Run Scripts:
 </br>
 tp-link-wn821n driver:    
 https://askubuntu.com/questions/879868/tp-link-wn821n-23570107-not-working
+</br>
+mitm-channel-based:    
+https://pypi.org/project/mitm-channel-based/
+</br>
+pip for python2:  
+https://linuxize.com/post/how-to-install-pip-on-ubuntu-18.04/
