@@ -1,7 +1,7 @@
 # Running an Simple AP
 
 
-Sources:    
+Execution code:    
 sudo python fakeAP.py SSID PASSWORD 1 INTERNETֹֹ_INTERFACE APֹ_INTERFACE    
 
 Example:    

@@ -56,7 +56,10 @@ def openAP(net_ssid,password,net_channel,internet_interface,interface):
 	"wpa_key_mgmt=WPA-PSK\n"\
 	"wpa_pairwise=CCMP\n"\
 	"rsn_pairwise=CCMP\n"\
+	"rsn_ptksa_counters=0\n"\ # ?
+	"rsn_gtksa_counters=0\n"\ # ?
 	"wmm_enabled=1\n"\
+	"wmm_advertised=1\n"\ # ?
 	"hw_mode=g\n"\
 	"auth_algs=3\n"\
 	"wpa_passphrase="+password+""
