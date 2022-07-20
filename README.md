@@ -57,4 +57,4 @@ pip for python2:
 https://linuxize.com/post/how-to-install-pip-on-ubuntu-18.04/
 
 
-python2 -m pip install scapy
+python2 -m pip install scapy==2.4.4
