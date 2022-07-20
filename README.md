@@ -55,3 +55,6 @@ https://pypi.org/project/mitm-channel-based/
 </br>
 pip for python2:  
 https://linuxize.com/post/how-to-install-pip-on-ubuntu-18.04/
+
+
+python2 -m pip install scapy
