@@ -376,16 +376,13 @@ log-dhcp"""
 		'''
 		with open("hostapd_rogue.conf", "w") as fp:
 			fp.write(self.__write_config(self.nic_rogue_ap))
-		self.hostapd = subprocess.Popen(["./hostapd/hostapd", "hostapd_rogue.conf", "-dd", "-K"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-		#command = 'sudo gnome-terminal -- sh -c "../hostapd/hostapd hostapd_rogue.conf -dd -K;"$SHELL'
-		
-		#command = "./hostapd/hostapd hostapd_rogue.conf -dd -K;"
-		#command = 'sudo python3 fakeAP.py ' + self.nic_rogue_ap + ' ' + str(1) + ' ' + "ens33" + ' ' + "wlan0mon" + ';'
-		# os.system(command)
-		#self.hostapd = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-		#stdout, stderr = self.hostapd.communicate()
+		hostapd_path = ""
+		if os.path.isdir('hostapd'):  # current folder contains `hostapd` folder
+			hostapd_path = "./hostapd/hostapd"
+		else:  # default
+			hostapd_path = "../hostapd/hostapd"
+		self.hostapd = subprocess.Popen([hostapd_path, "hostapd_rogue.conf", "-dd", "-K"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-		# self.hostapd = os.system(command)
 		self.hostapd_log = open("hostapd_rogue.log", "w")
 		log(STATUS, "Giving the rogue hostapd one second to initialize ...")
 		time.sleep(2)
