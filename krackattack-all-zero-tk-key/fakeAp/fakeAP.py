@@ -43,10 +43,6 @@ def openAP(net_ssid,net_channel,internet_interface,interface):
     os.system('systemctl stop systemd-resolved>/dev/null 2>&1')
 
     # Create configuration files
-    # conf_text = "interface="+interface+"\ndriver=nl80211\nssid="+net_ssid+""\
-    # "\nchannel="+net_channel+"\nmacaddr_acl=0\nignore_broadcast_ssid=0\n"\
-    # "wme_enabled=0"
-    
     conf_text = "interface="+interface+"\ndriver=nl80211\nssid="+net_ssid+""\
     "\nchannel="+net_channel+"\nmacaddr_acl=0\nignore_broadcast_ssid=0\n"\
     "wme_enabled=0"
@@ -57,9 +53,9 @@ def openAP(net_ssid,net_channel,internet_interface,interface):
     # Save file with the current path
     #current_path=pathlib.Path().resolve()
     current_path = os.path.dirname(os.path.realpath(__file__))
-    # file1 = open("web/path.txt","w")
-    # file1.writelines(str(current_path))
-    # file1.close()
+    file1 = open("web/path.txt","w")
+    file1.writelines(str(current_path))
+    file1.close()
     conf_text = \
     "bogus-priv\n"\
     "server=/localnet/"+CAPTIVEPORTAL_IP+"\n"\
@@ -165,4 +161,4 @@ def openAP(net_ssid,net_channel,internet_interface,interface):
 if __name__ == "__main__":
     print('if failed try \"nmcli device set '+sys.argv[4]+' managed no\"')
     openAP(sys.argv[1],sys.argv[2],sys.argv[3],sys.argv[4])
-    #os.system('cat /var/www/html/client_data.txt >> client_data.txt')
+    os.system('cat /var/www/html/client_data.txt >> client_data.txt')

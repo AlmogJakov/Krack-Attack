@@ -186,8 +186,11 @@ wpa={wpaver}
 wpa_key_mgmt={akms}
 wpa_pairwise={pairwise}
 rsn_pairwise={pairwise}
+rsn_ptksa_counters={ptksa_counters}
+rsn_gtksa_counters={gtksa_counters}
 
 wmm_enabled={wmmenabled}
+wmm_advertised={wmmadvertised}
 hw_mode=g
 auth_algs=3
 wpa_passphrase=XXXXXXXX"""
@@ -373,13 +376,13 @@ log-dhcp"""
 		'''
 		with open("hostapd_rogue.conf", "w") as fp:
 			fp.write(self.__write_config(self.nic_rogue_ap))
-		#self.hostapd = subprocess.Popen(["../hostapd/hostapd", "hostapd_rogue.conf", "-dd", "-K"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+		self.hostapd = subprocess.Popen(["./hostapd/hostapd", "hostapd_rogue.conf", "-dd", "-K"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 		#command = 'sudo gnome-terminal -- sh -c "../hostapd/hostapd hostapd_rogue.conf -dd -K;"$SHELL'
 		
-		command = "./hostapd/hostapd hostapd_rogue.conf -dd -K;"
+		#command = "./hostapd/hostapd hostapd_rogue.conf -dd -K;"
 		#command = 'sudo python3 fakeAP.py ' + self.nic_rogue_ap + ' ' + str(1) + ' ' + "ens33" + ' ' + "wlan0mon" + ';'
 		# os.system(command)
-		self.hostapd = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+		#self.hostapd = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 		#stdout, stderr = self.hostapd.communicate()
 
 		# self.hostapd = os.system(command)

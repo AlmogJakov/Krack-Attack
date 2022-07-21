@@ -1,29 +1,3 @@
-<b>Note! The code execution is under python 2</b>    
-</br>
-
-<b>In case of long interface name please run 'sudo airmon-ng start INTERFACE_NAME'</b>  
-</br>
-
-Before execution run the following commands:
-- sudo airmon-ng check kill
-- service network-manager stop
-- sudo rfkill unblock wifi
-
-krack_all_zero_tk.py Run example:
-- sudo python ./krackattack/krack_all_zero_tk.py wlx6c5ab0b3f988 wlan0mon ens33 "check" -t F0:27:65:DA:AD:E8    
-(See below for an explanation of the command)    
-
-fakeAP.py Run example:
-- sudo python fakeAP.py yoyo 1 ens33 wlan0mon   
-(where SSID=yoyo, CHANNEL=1, INTERNET_INTERFACE=ens33, AP_INTERFACE=wlan0mon)    
-    
-The code may require the following packages:
-- macchanger
-- connect-proxy (sudo apt install connect-proxy)
-- socket (sudo apt install socket)
-
--------------
-
 ## Warning!
 This code only works with clients that install the all-zero TK in a KraCK attack! Please, use [this tool](https://github.com/lucascouto/krackattacks-scripts) to verify if the client is vunarable to the attack. 
 
