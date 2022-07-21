@@ -8,6 +8,10 @@ https://github.com/lucascouto/krackattack-all-zero-tk-key
 https://github.com/kristate/krackinfo    
 https://github.com/fwalloe/KrackPlus   
 
+
+<b>Note! In order for the scripts to work properly, execution permission must be given to the 'hostapd' file located in the 'hostapd' folder</b>  
+(for example navigate to the hostapd folder and run: sudo chmod 777 hostapd)
+
 <h3>Check Client Vulnerability</h3>
 
 Run Scripts:
@@ -55,3 +59,6 @@ https://pypi.org/project/mitm-channel-based/
 </br>
 pip for python2:  
 https://linuxize.com/post/how-to-install-pip-on-ubuntu-18.04/
+
+
+python2 -m pip install scapy==2.4.4
