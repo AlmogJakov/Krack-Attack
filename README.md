@@ -65,6 +65,10 @@ https://linuxize.com/post/how-to-install-pip-on-ubuntu-18.04/
 <b>Note! In order for the scripts to work properly, execution permission must be given to the 'hostapd' file located in the 'hostapd' folder</b>  
 (for example navigate to the hostapd folder and run: sudo chmod 777 hostapd)
 
+No need to install an external MidM library. The attack files in this repository include the MidM-ChannelBased implementation files.
+<p align="center"><img src="https://user-images.githubusercontent.com/68508896/180347003-a7a58f68-0819-4c54-bacb-d10cebcc2537.png"/></p>
+
+
 First, Clone this repository for the attack files.
 
 Dependencies:   
@@ -85,10 +89,28 @@ The code may require the following packages:
 - connect-proxy (sudo apt install connect-proxy)
 - socket (sudo apt install socket)
 
+<h1>Sources</h1>
 
-Sources:    
 [https://github.com/vanhoefm/krackattacks](https://github.com/vanhoefm/krackattacks)      
 [https://github.com/vanhoefm/krackattacks-scripts](https://github.com/vanhoefm/krackattacks-scripts)      
 https://github.com/lucascouto/krackattack-all-zero-tk-key    
+
+Additional:    
 https://github.com/kristate/krackinfo    
 https://github.com/fwalloe/KrackPlus   
+https://pypi.org/project/mitm-channel-based (mitm-channel-based)
+
+
+<h1>Troubleshooting</h1>
+
+<b>Error:</b> L2Socket is Not defined   
+<b>Solution:</b> Install scapy 2.4.4 (python2 -m pip install scapy==2.4.4)   
+
+<b>Error:</b> SIOCSIFFLAGS: No such device   
+<b>Solution:</b> Re-plug the adapter   
+
+<b>Name:</b> pip for python2   
+<b>Reference:</b> https://linuxize.com/post/how-to-install-pip-on-ubuntu-18.04   
+
+<b>Name:</b> tp-link-wn821n driver   
+<b>Reference:</b> https://askubuntu.com/questions/879868/tp-link-wn821n-23570107-not-working   
