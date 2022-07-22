@@ -107,3 +107,9 @@ https://pypi.org/project/mitm-channel-based (mitm-channel-based)
 
 <b>Name:</b> tp-link-wn821n driver   
 <b>Reference:</b> https://askubuntu.com/questions/879868/tp-link-wn821n-23570107-not-working   
+
+
+---------
+Itay Github: [https://github.com/itay-rafee](https://github.com/itay-rafee)  
+Almog Github: [https://github.com/AlmogJakov](https://github.com/AlmogJakov)  
+Elhai Github: [https://github.com/ElhaiMansbach](https://github.com/ElhaiMansbach)
