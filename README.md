@@ -54,8 +54,13 @@ Run Scripts:
 ---------
 <h1>Attack</h1>
 
-<b>Note! In order for the scripts to work properly, execution permission must be given to the 'hostapd' file located in the 'hostapd' folder</b>  
-(for example navigate to the hostapd folder and run: sudo chmod 777 hostapd)
+<b>Note! In order for the script to work properly:    
+- The code execution is under python 2   
+- Execution permission must be given to the 'hostapd' file located in the 'hostapd' folder   
+  (for example navigate to the hostapd folder and run: sudo chmod 777 hostapd)   
+- The code must be run from the krackattack-all-zero-tk-key root folder   
+- In case of long interface name please run 'sudo airmon-ng start INTERFACE_NAME'</b>  
+
 
 No need to install an external MidM library. The attack files in this repository include the MidM-ChannelBased implementation files.
 <p align="center"><img src="https://user-images.githubusercontent.com/68508896/180347003-a7a58f68-0819-4c54-bacb-d10cebcc2537.png"/></p>
