@@ -1,6 +1,6 @@
 # Krack-Attack
 
-<p align="center"><img src="https://user-images.githubusercontent.com/68508896/180343424-e1319190-3cd6-484c-a535-112d263e0d12.png" width="100%"/></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/68508896/180347823-695a3063-228f-4a09-aa4a-461d1c0c32de.png" width="100%"/></p>
 
 KRACK is short for Key Reinstallation Attack. It is an attack that leverages a vulnerability in the Wi-Fi Protected Access 2 (WPA2) protocol, which keeps your Wi-Fi connection secure. For hackers, KRACK is a tool they use when in close range of one of their targets to access encrypted data.
 
@@ -50,16 +50,8 @@ First, Make wpa_supplicant conf file:
 
 Run Scripts:
 - ./krack-ft-test.py wpa_supplicant -D nl80211 -i wlan0mon -c /etc/wpa_supplicant.conf
-</br>
-tp-link-wn821n driver:    
-https://askubuntu.com/questions/879868/tp-link-wn821n-23570107-not-working
-</br>
-mitm-channel-based:    
-https://pypi.org/project/mitm-channel-based/
-</br>
-pip for python2:  
-https://linuxize.com/post/how-to-install-pip-on-ubuntu-18.04/
 
+---------
 <h1>Attack</h1>
 
 <b>Note! In order for the scripts to work properly, execution permission must be given to the 'hostapd' file located in the 'hostapd' folder</b>  
@@ -89,6 +81,7 @@ The code may require the following packages:
 - connect-proxy (sudo apt install connect-proxy)
 - socket (sudo apt install socket)
 
+---------
 <h1>Sources</h1>
 
 [https://github.com/vanhoefm/krackattacks](https://github.com/vanhoefm/krackattacks)      
@@ -100,7 +93,7 @@ https://github.com/kristate/krackinfo
 https://github.com/fwalloe/KrackPlus   
 https://pypi.org/project/mitm-channel-based (mitm-channel-based)
 
-
+---------
 <h1>Troubleshooting</h1>
 
 <b>Error:</b> L2Socket is Not defined   
