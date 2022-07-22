@@ -1,16 +1,16 @@
 # Krack-Attack
 
+<p align="center"><img src="https://user-images.githubusercontent.com/68508896/180343424-e1319190-3cd6-484c-a535-112d263e0d12.png" width="100%"/></p>
 
-Sources:    
-[https://github.com/vanhoefm/krackattacks](https://github.com/vanhoefm/krackattacks)      
-[https://github.com/vanhoefm/krackattacks-scripts](https://github.com/vanhoefm/krackattacks-scripts)      
-https://github.com/lucascouto/krackattack-all-zero-tk-key    
-https://github.com/kristate/krackinfo    
-https://github.com/fwalloe/KrackPlus   
+KRACK is short for Key Reinstallation Attack. It is an attack that leverages a vulnerability in the Wi-Fi Protected Access 2 (WPA2) protocol, which keeps your Wi-Fi connection secure. For hackers, KRACK is a tool they use when in close range of one of their targets to access encrypted data.
 
+When KRACK was first introduced in 2017, it shattered the perception that WPA2 was secure. This meant that the Wi-Fi “haven” in people’s homes had been penetrated. As researchers uncovered the threat, they discovered that several types of devices were all vulnerable, including those running iOS, Android, Linux, macOS, and Windows. 
 
-<b>Note! In order for the scripts to work properly, execution permission must be given to the 'hostapd' file located in the 'hostapd' folder</b>  
-(for example navigate to the hostapd folder and run: sudo chmod 777 hostapd)
+However, despite the weaknesses found in WPA2, there are still ways to use the internet without constantly worrying about hackers penetrating your system.
+
+------------
+
+<h1>Vulnerability Check</h1>
 
 <h3>Check Client Vulnerability</h3>
 
@@ -60,5 +60,35 @@ https://pypi.org/project/mitm-channel-based/
 pip for python2:  
 https://linuxize.com/post/how-to-install-pip-on-ubuntu-18.04/
 
+<h1>Attack</h1>
 
-python2 -m pip install scapy==2.4.4
+<b>Note! In order for the scripts to work properly, execution permission must be given to the 'hostapd' file located in the 'hostapd' folder</b>  
+(for example navigate to the hostapd folder and run: sudo chmod 777 hostapd)
+
+First, Clone this repository for the attack files.
+
+Dependencies:   
+- sudo apt update
+- sudo apt install libnl-3-dev libnl-genl-3-dev pkg-config libssl-dev net-tools git sysfsutils python-scapy python-pycryptodome
+
+Before execution run the following commands:
+- sudo airmon-ng check kill
+- service network-manager stop
+- sudo rfkill unblock wifi
+
+krack_all_zero_tk.py Run example:
+- sudo python ./krackattack/krack_all_zero_tk.py wlx6c5ab0b3f988 wlan0mon ens33 "check" -t F0:27:65:DA:AD:E8    
+(See below for an explanation of the command)     
+    
+The code may require the following packages:
+- macchanger
+- connect-proxy (sudo apt install connect-proxy)
+- socket (sudo apt install socket)
+
+
+Sources:    
+[https://github.com/vanhoefm/krackattacks](https://github.com/vanhoefm/krackattacks)      
+[https://github.com/vanhoefm/krackattacks-scripts](https://github.com/vanhoefm/krackattacks-scripts)      
+https://github.com/lucascouto/krackattack-all-zero-tk-key    
+https://github.com/kristate/krackinfo    
+https://github.com/fwalloe/KrackPlus   
