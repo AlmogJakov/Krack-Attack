@@ -62,7 +62,7 @@ Run Scripts:
 - In case of long interface name please run 'sudo airmon-ng start INTERFACE_NAME'</b>  
 
 
-No need to install an external MidM library. The attack files in this repository include the MidM-ChannelBased implementation files.
+No need to install an external MitM library. The attack files in this repository include the MitM-ChannelBased implementation files.
 <p align="center"><img src="https://user-images.githubusercontent.com/68508896/180347003-a7a58f68-0819-4c54-bacb-d10cebcc2537.png"/></p>
 
 
